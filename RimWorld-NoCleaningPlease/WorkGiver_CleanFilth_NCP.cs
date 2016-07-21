@@ -17,7 +17,7 @@ namespace LT
 
         public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn)
         {
-            return ListerFilthInCleaningArea.FilthWithin;
+            return ListerFilthInHomeArea.FilthInHomeArea;
         }
 
         public override bool HasJobOnThing(Pawn pawn, Thing t)

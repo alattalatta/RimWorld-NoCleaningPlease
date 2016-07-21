@@ -18,7 +18,7 @@ namespace LT
         protected override IEnumerable<Toil> MakeNewToils()
         {
             this.FailOnDespawnedNullOrForbidden(TargetIndex.A);
-            this.FailOn(() => !Find.AreaCleaning[TargetThingA.Position]);
+            this.FailOn(() => !Find.AreaCleaning[TargetThingA.Position]); // No filth at target position
 
             var reserve = Toils_Reserve.Reserve(TargetIndex.A);
             yield return reserve;
