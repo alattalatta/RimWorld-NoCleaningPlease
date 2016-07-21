@@ -13,7 +13,14 @@ namespace LT
         private float totalCleaningWorkDone;
         private float totalCleaningWorkRequired;
 
-        private Filth Filth => (Filth) CurJob.GetTarget(TargetIndex.A).Thing;
+        private RimWorld.Filth Filth
+        {
+            get
+            {
+                var a = (RimWorld.Filth)CurJob.GetTarget(TargetIndex.A).Thing;
+                return a;
+            }
+        }
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
@@ -30,6 +37,11 @@ namespace LT
             {
                 initAction = () =>
                 {
+                    if (Filth == null)
+                    {
+                        Log.Message("LTNC NULL2");
+                        return;
+                    }
                     totalCleaningWorkRequired = Filth.def.filth.cleaningWorkToReduceThickness*Filth.thickness;
                 },
 

@@ -25,7 +25,7 @@ namespace LT
             }
         }
 
-        public static void Notify_FilthSpawned(Filth f)
+        public static void Notify_FilthSpawned(RimWorld.Filth f)
         {
             if (Find.AreaCleaning[f.Position])
             {
@@ -33,7 +33,7 @@ namespace LT
             }
         }
 
-        public static void Notify_FilthDespawned(Filth f)
+        public static void Notify_FilthDespawned(RimWorld.Filth f)
         {
             for (var i = 0; i < FilthInCleaningArea.Count; i++)
             {
@@ -54,7 +54,7 @@ namespace LT
             {
                 var thingList =
                     c.GetThingList()
-                     .Where(s => s.def.thingClass == typeof(Filth)|| s.def.thingClass == typeof(RimWorld.Filth));
+                     .Where(s => s.def.thingClass == typeof(RimWorld.Filth));
 
                 FilthInCleaningArea.AddRange(thingList);
             }
