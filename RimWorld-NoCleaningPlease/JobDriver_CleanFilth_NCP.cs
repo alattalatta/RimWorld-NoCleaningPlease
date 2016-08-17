@@ -73,7 +73,7 @@ namespace LT
             };
             clean.WithEffect("Clean", TargetIndex.A);
             clean.WithProgressBar(TargetIndex.A, GetProgress, true);
-            clean.WithSustainer(SoundDefOf.Interact_CleanFilth);
+            clean.PlaySustainerOrSound(SoundDefOf.Interact_CleanFilth);
             yield return clean;
         }
 

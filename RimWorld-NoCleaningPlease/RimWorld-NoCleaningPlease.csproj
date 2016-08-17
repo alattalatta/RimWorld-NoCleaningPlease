@@ -55,7 +55,6 @@
     <Compile Include="Area\Designator_AreaCleaning.cs" />
     <Compile Include="JobDriver_CleanFilth_NCP.cs" />
     <Compile Include="Detour\ListerFilthInCleaningArea.cs" />
-    <Compile Include="Util\BackwardCompat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\ResourceBank_NCP.cs" />
     <Compile Include="Util\SpecialInjector_NCP.cs" />
